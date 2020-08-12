@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_12_001823) do
+ActiveRecord::Schema.define(version: 2020_08_12_031857) do
 
   create_table "counties", force: :cascade do |t|
     t.string "name", null: false
@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(version: 2020_08_12_001823) do
     t.datetime "updated_at", null: false
     t.string "issue"
     t.index ["representative_id"], name: "index_news_items_on_representative_id"
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.string "rating"
   end
 
   create_table "representatives", force: :cascade do |t|
