@@ -4,6 +4,7 @@ class MyNewsItemsController < SessionController
     before_action :set_representative
     before_action :set_representatives_list
     before_action :set_issues_list
+    before_action :set_ratings_list
     before_action :set_news_item, only: %i[edit update destroy]
 
     def new
@@ -44,6 +45,10 @@ class MyNewsItemsController < SessionController
                         'Abortion', 'Student Loans', 'Gun Control', 'Unemployment', 'Climate Change',
                         'Homelessness', 'Racism', 'Tax Reform', 'Net Neutrality', 'Religious Freedom',
                         'Border Security', 'Minimum Wage', 'Equal Pay']
+    end
+
+    def set_ratings_list
+        @ratings_list = %w[1 2 3 4 5]
     end
 
     def set_representative
