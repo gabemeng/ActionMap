@@ -2,6 +2,7 @@ const d3 = require('d3');
 const topojson = require('topojson');
 const mapUtils = require('./map_utils');
 
+
 exports.Map = () => {
     const map = Object.create(Map.prototype);
     map.infoContainer = $('#actionmap-info-container');
